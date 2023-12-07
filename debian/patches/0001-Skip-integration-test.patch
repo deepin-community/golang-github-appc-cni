@@ -1,0 +1,30 @@
+From: Shengjing Zhu <zhsj@debian.org>
+Date: Sun, 28 Feb 2021 19:34:49 +0800
+Subject: Skip integration test
+
+Forwarded: not-needed
+---
+ libcni/backwards_compatibility_test.go     | 2 ++
+ pkg/invoke/get_version_integration_test.go | 2 ++
+ 2 files changed, 4 insertions(+)
+
+diff --git a/libcni/backwards_compatibility_test.go b/libcni/backwards_compatibility_test.go
+index dabd872..2aad65c 100644
+--- a/libcni/backwards_compatibility_test.go
++++ b/libcni/backwards_compatibility_test.go
+@@ -1,3 +1,5 @@
++// +build ignore
++
+ // Copyright 2016 CNI authors
+ //
+ // Licensed under the Apache License, Version 2.0 (the "License");
+diff --git a/pkg/invoke/get_version_integration_test.go b/pkg/invoke/get_version_integration_test.go
+index 9fbde03..f002ff7 100644
+--- a/pkg/invoke/get_version_integration_test.go
++++ b/pkg/invoke/get_version_integration_test.go
+@@ -1,3 +1,5 @@
++// +build ignore
++
+ // Copyright 2016 CNI authors
+ //
+ // Licensed under the Apache License, Version 2.0 (the "License");

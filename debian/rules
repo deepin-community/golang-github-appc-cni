@@ -1,4 +1,11 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_EXCLUDES := \
+	pkg/version/testhelpers pkg/version/legacy_examples \
+	cnitool plugins/debug
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang --builddirectory=_build
+
+override_dh_auto_install:
+	dh_auto_install -- --no-binaries
